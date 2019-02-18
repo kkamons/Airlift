@@ -25,11 +25,11 @@ def process_bigData(chunk):
 def main():
 
     # airliftTblPath = 'C:/Users/keith/Desktop/WashU/Spring19/ESE404/Project/washUAirlift/.csv'
-    cmdCodePath = 'C:/Users/keith/Desktop/WashU/Spring19/ESE404/Project/washUAirlift/Command_Code_Lookup.txt'
-    hMalPath = 'C:/Users/keith/Desktop/WashU/Spring19/ESE404/Project/washUAirlift/AirliftHMALCode.txt'
-    locDataPath = 'C:/Users/keith/Desktop/WashU/Spring19/ESE404/Project/washUAirlift/locationData.txt'
-    WUCPath = 'C:/Users/keith/Desktop/WashU/Spring19/ESE404/Project/washUAirlift/AirliftWUCLookupFiles.txt'
-    MDCPath = 'C:/Users/keith/Desktop/WashU/Spring19/ESE404/Project/washUAirlift/WashUAirliftMDC.txt'
+    cmdCodePath = '../Command_Code_Lookup.txt'
+    hMalPath = '../AirliftHMALCode.txt'
+    locDataPath = '../locationData.txt'
+    WUCPath = '../AirliftWUCLookupFiles.txt'
+    MDCPath = '../WashUAirliftMDC.txt'
 
     
     aliftTbl = readTheBigFile(MDCPath)
@@ -43,7 +43,7 @@ def main():
     print(list(aliftTbl.columns.values))
     print('\n\n')
     print(aliftTbl.head())
-    print(aliftTbl[["DATE","START_TIME","STOP_TIME","HOURS","WUC"]].head())
+    print(aliftTbl[["DATE","START_TIME","STOP_TIME","HOURS"]].head())
 
 
 if __name__ == "__main__":
