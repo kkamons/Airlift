@@ -7,3 +7,8 @@ AirliftWUCLookupFiles.txt
 locationData.txt
 MDCsum.txt
 WashUAirliftMDC.txt
+abbrev.csv
+WashUAirliftMDC.csv
+longerThan4_25HRS.csv
+lessThan4_25HRS.csv
+Summary.txt

@@ -40,12 +40,16 @@ def main():
     locData = pd.read_csv(locDataPath)
     WUC=pd.read_csv(WUCPath)
 
-    print(aliftTbl.shape)
-    print(list(aliftTbl.columns.values))
-    print('\n\n')
     print(aliftTbl.head())
-    print(aliftTbl[["DATE","START_TIME","STOP_TIME","HOURS"]].head())
+    print(aliftTbl.iloc[0,12])
+    print((aliftTbl.iloc[:,12]>=4.25))
+    # print(aliftTbl.CREW_SIZE.unique())
+    longTime = aliftTbl[aliftTbl.iloc[:,12]>=4.25]
+    shortTime = aliftTbl[aliftTbl.iloc[:,12]<4.25]
+    print(longTime.head())
 
+    longTime.to_csv("../longerThan4_25HRS.csv")
+    shortTime.to_csv("../lessThan4_25HRS.csv")
 
 
 if __name__ == "__main__":
